@@ -46,7 +46,7 @@ public class CarManager : MonoBehaviour
         }
         else if (Car != null && WasTapped() && Reticle.CurrentPlane != null)
         {
-            Car = null;
+            Destroy(Car.gameObject);
             DrivingSurfaceManager.UnLockPlane(Reticle.CurrentPlane);
 
         }

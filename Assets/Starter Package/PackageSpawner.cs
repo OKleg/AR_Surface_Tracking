@@ -64,7 +64,7 @@ public class PackageSpawner : MonoBehaviour
         var packageClone = GameObject.Instantiate(PackagePrefab);
         packageClone.transform.position = FindRandomLocation(plane);
 
-        //packageClone.transform.localScale *= Random.Range(0.5f, 2.0f);
+        packageClone.transform.localScale *= 0.2f;
         //Package.transform.localScale = new Vector3(Random.Range(0.5f, 2.0f), Random.Range(0.5f, 2.0f), Random.Range(0.5f, 2.0f));
         var packageScale = packageClone.gameObject.transform.localScale;
         packageScale.Set(0.8f, packageScale.y * 2f, 0.8f);
@@ -80,7 +80,7 @@ public class PackageSpawner : MonoBehaviour
             {
                 SpawnPackage(lockedPlane);
                 //isPackageInitialized = true;
-                Score.text = (int.Parse(Score.text) + 1).ToString();
+                //Score.text = (int.Parse(Score.text) + 1).ToString();
             }
             var packagePosition = Package.gameObject.transform.position;
             var packageScale = Package.gameObject.transform.localScale;

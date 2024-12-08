@@ -15,6 +15,7 @@
  */
 
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 /**
@@ -24,6 +25,7 @@ public class CarBehaviour : MonoBehaviour
 {
     public ReticleBehaviour Reticle;
     public float Speed = 1.2f;
+    [SerializeField] private TMP_Text Score;
 
     private void Update()
     {
@@ -46,6 +48,8 @@ public class CarBehaviour : MonoBehaviour
         if (Package != null)
         {
             Destroy(other.gameObject);
+            Score.text = (int.Parse(Score.text) + 1).ToString();
+
         }
     }
 }
